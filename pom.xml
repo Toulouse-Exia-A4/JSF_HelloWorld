@@ -38,10 +38,37 @@
       <artifactId>jsf-impl</artifactId>
       <version>2.1.7</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>3.6.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
+    <dependency>
+      <groupId>javax.enterprise</groupId>
+      <artifactId>cdi-api</artifactId>
+      <version>2.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>eclipselink</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
-    <finalName>jsf-helloworld</finalName>
+    <finalName>cesiBigApp</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -56,6 +83,10 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.7.0</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>

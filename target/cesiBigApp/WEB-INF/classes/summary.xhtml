@@ -6,14 +6,15 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Enregistrement</title>
+    <title>Résumé</title>
 </h:head>
 <h:body>
+    <h3>Informations Etudiants :</h3>
+    Nom : #{studentModel.lastname}<br/>
+    Prénom : #{studentModel.firstname}<br/>
+    email : #{studentModel.email}<br/>
     <h:form>
-        Nom : <h:inputText id="fname" value="#{studentModel.firstname}"/>
-        Prénom : <h:inputText id="name" value="#{studentModel.lastname}"/>
-        <br />
-        <h:commandButton id="auth" value="authentication" action="#{studentModel.addIdentity}"/>
+        <h:commandButton id="create" value="Enregistrer" action="#{studentModel.create}"/>
     </h:form>
 </h:body>
 </html>

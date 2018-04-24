@@ -5,7 +5,15 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello world from JSF !"/>
-</f:view>
+<h:head>
+    <title>Enregistrement</title>
+</h:head>
+<h:body>
+    <h:form>
+        Nom : <h:inputText id="fname" value="#{studentModel.firstname}"/>
+        Prénom : <h:inputText id="name" value="#{studentModel.lastname}"/>
+        <br />
+        <h:commandButton id="auth" value="authentication" action="#{studentModel.addIdentity}"/>
+    </h:form>
+</h:body>
 </html>
